@@ -1,0 +1,197 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.bayes.NaiveBayes 
+Relation:     df_sin_meteo_cluster-weka.filters.unsupervised.attribute.Remove-R1,13-14
+Instances:    325958
+Attributes:   11
+              HORA
+              CLASE SINIESTRO
+              CHOQUE_CON
+              TIPO LUGAR
+              GRAVEDAD
+              TIPO PERSONA
+              EDAD
+              SEXO
+              PERSONAS IMPLICADAS
+              DIA_SEMANA
+              Cluster
+Test mode:    split 80.0% train, remainder test
+
+=== Classifier model (full training set) ===
+
+Naive Bayes Classifier
+
+                               Class
+Attribute                Con Heridos Solo DaÃ±os Con Muertos
+                              (0.29)       (0.7)      (0.01)
+=============================================================
+HORA
+  MaÃ±ana                     29935.0     81998.0       906.0
+  Tarde                       29315.0     82137.0       895.0
+  Anochecer                   18881.0     41769.0       860.0
+  Madrugada                   15268.0     23126.0       880.0
+  [total]                     93399.0    229030.0      3541.0
+
+CLASE SINIESTRO
+  Choque                      93396.0    229027.0      3538.0
+  [total]                     93396.0    229027.0      3538.0
+
+CHOQUE_CON
+  Vehiculo                    90103.0    223082.0      3102.0
+  Objeto Fijo                  3294.0      5946.0       437.0
+  [total]                     93397.0    229028.0      3539.0
+
+TIPO LUGAR
+  IntersecciÃ³n               31933.0     42963.0       953.0
+  Via                         60283.0    180119.0      2516.0
+  Lote o predio                 170.0      2949.0         8.0
+  Puente                        653.0      1822.0        56.0
+  Paso inferior                 170.0       812.0         8.0
+  Peatonal / Cicloruta          184.0       334.0         1.0
+  Tunel                           9.0        34.0         2.0
+  [total]                     93402.0    229033.0      3544.0
+
+TIPO PERSONA
+  PEATON                       1928.0        32.0       126.0
+  CONDUCTOR                   39580.0    215453.0      1362.0
+  MOTOCICLISTA                24956.0     12263.0       994.0
+  PASAJERO                    17451.0        70.0       636.0
+  CICLISTA                     9485.0      1213.0       424.0
+  [total]                     93400.0    229031.0      3542.0
+
+EDAD
+  mean                        34.7142     38.9553     35.2945
+  std. dev.                    14.476     12.9372     14.5238
+  weight sum                    91692      226446        3415
+  precision                    1.0811      1.0811      1.0811
+
+SEXO
+  FEMENINO                    19746.0     24047.0       551.0
+  MASCULINO                   71645.0    201262.0      2847.0
+  SIN INFORMACION              2007.0      3720.0       142.0
+  [total]                     93398.0    229029.0      3540.0
+
+PERSONAS IMPLICADAS
+  mean                         4.1779      2.5524      6.5897
+  std. dev.                    3.9785      1.3162     11.1064
+  weight sum                    93395      229026        3537
+  precision                    2.0857      2.0857      2.0857
+
+DIA_SEMANA
+  LABORAL                     68441.0    169661.0      2691.0
+  FDS                         24956.0     59367.0       848.0
+  [total]                     93397.0    229028.0      3539.0
+
+Cluster
+  mean                         4.3604       4.681      4.5307
+  std. dev.                    3.1704      3.2366       3.114
+  weight sum                    93395      229026        3537
+  precision                         1           1           1
+
+
+
+Time taken to build model: 0.2 seconds
+
+
+=== Classifier model for training split (260766 instances) ===
+
+Naive Bayes Classifier
+
+                               Class
+Attribute                Con Heridos Solo DaÃ±os Con Muertos
+                              (0.29)       (0.7)      (0.01)
+=============================================================
+HORA
+  MaÃ±ana                     23975.0     65560.0       735.0
+  Tarde                       23410.0     65699.0       714.0
+  Anochecer                   15166.0     33361.0       686.0
+  Madrugada                   12205.0     18560.0       707.0
+  [total]                     74756.0    183180.0      2842.0
+
+CLASE SINIESTRO
+  Choque                      74753.0    183177.0      2839.0
+  [total]                     74753.0    183177.0      2839.0
+
+CHOQUE_CON
+  Vehiculo                    72136.0    178429.0      2487.0
+  Objeto Fijo                  2618.0      4749.0       353.0
+  [total]                     74754.0    183178.0      2840.0
+
+TIPO LUGAR
+  IntersecciÃ³n               25533.0     34278.0       755.0
+  Via                         48274.0    144165.0      2032.0
+  Lote o predio                 130.0      2362.0         5.0
+  Puente                        524.0      1447.0        42.0
+  Paso inferior                 139.0       639.0         8.0
+  Peatonal / Cicloruta          151.0       261.0         1.0
+  Tunel                           8.0        31.0         2.0
+  [total]                     74759.0    183183.0      2845.0
+
+TIPO PERSONA
+  PEATON                       1538.0        25.0        99.0
+  CONDUCTOR                   31599.0    172331.0      1104.0
+  MOTOCICLISTA                19967.0      9792.0       797.0
+  PASAJERO                    14052.0        60.0       508.0
+  CICLISTA                     7601.0       973.0       335.0
+  [total]                     74757.0    183181.0      2843.0
+
+EDAD
+  mean                        34.7099     38.9784     35.3176
+  std. dev.                   14.4622     12.9254     14.5884
+  weight sum                    73376      181121        2740
+  precision                    1.0909      1.0909      1.0909
+
+SEXO
+  FEMENINO                    15831.0     19232.0       449.0
+  MASCULINO                   57318.0    160977.0      2277.0
+  SIN INFORMACION              1606.0      2970.0       115.0
+  [total]                     74755.0    183179.0      2841.0
+
+PERSONAS IMPLICADAS
+  mean                         4.1865      2.5532      6.6143
+  std. dev.                    3.9928      1.3264     11.2092
+  weight sum                    74752      183176        2838
+  precision                    2.0857      2.0857      2.0857
+
+DIA_SEMANA
+  LABORAL                     54751.0    135800.0      2154.0
+  FDS                         20003.0     47378.0       686.0
+  [total]                     74754.0    183178.0      2840.0
+
+Cluster
+  mean                         4.3678      4.6815       4.556
+  std. dev.                    3.1749      3.2352      3.1246
+  weight sum                    74752      183176        2838
+  precision                         1           1           1
+
+
+=== Evaluation on test split ===
+
+Time taken to test model on test split: 0.13 seconds
+
+=== Summary ===
+
+Correctly Classified Instances       53038               81.3566 %
+Incorrectly Classified Instances     12154               18.6434 %
+Kappa statistic                          0.5055
+Mean absolute error                      0.1536
+Root mean squared error                  0.3123
+Relative absolute error                 54.3444 %
+Root relative squared error             83.1219 %
+Total Number of Instances            65192     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.499    0.055    0.785      0.499    0.611      0.521    0.814     0.715     Con Heridos
+                 0.953    0.478    0.825      0.953    0.885      0.555    0.832     0.893     Solo DaÃ±os
+                 0.064    0.006    0.108      0.064    0.081      0.076    0.810     0.062     Con Muertos
+Weighted Avg.    0.814    0.352    0.806      0.814    0.798      0.540    0.827     0.834     
+
+=== Confusion Matrix ===
+
+     a     b     c   <-- classified as
+  9310  8973   360 |     a = Con Heridos
+  2157 43683    10 |     b = Solo DaÃ±os
+   389   265    45 |     c = Con Muertos
+

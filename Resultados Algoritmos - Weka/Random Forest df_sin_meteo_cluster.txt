@@ -1,0 +1,67 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.RandomForest -P 100 -I 100 -num-slots 1 -K 0 -M 1.0 -V 0.001 -S 1
+Relation:     df_sin_meteo_cluster-weka.filters.unsupervised.attribute.Remove-R1,13-14
+Instances:    325958
+Attributes:   11
+              HORA
+              CLASE SINIESTRO
+              CHOQUE_CON
+              TIPO LUGAR
+              GRAVEDAD
+              TIPO PERSONA
+              EDAD
+              SEXO
+              PERSONAS IMPLICADAS
+              DIA_SEMANA
+              Cluster
+Test mode:    split 80.0% train, remainder test
+
+=== Classifier model (full training set) ===
+
+RandomForest
+
+Bagging with 100 iterations and base learner
+
+weka.classifiers.trees.RandomTree -K 0 -M 1.0 -V 0.001 -S 1 -do-not-check-capabilities
+
+Time taken to build model: 77.61 seconds
+
+
+=== Classifier model for training split (260766 instances) ===
+
+RandomForest
+
+Bagging with 100 iterations and base learner
+
+weka.classifiers.trees.RandomTree -K 0 -M 1.0 -V 0.001 -S 1 -do-not-check-capabilities
+=== Evaluation on test split ===
+
+Time taken to test model on test split: 8.16 seconds
+
+=== Summary ===
+
+Correctly Classified Instances       55275               84.788  %
+Incorrectly Classified Instances      9917               15.212  %
+Kappa statistic                          0.6214
+Mean absolute error                      0.1381
+Root mean squared error                  0.2821
+Relative absolute error                 48.857  %
+Root relative squared error             75.0757 %
+Total Number of Instances            65192     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.662    0.073    0.785      0.662    0.718      0.623    0.861     0.788     Con Heridos
+                 0.931    0.329    0.870      0.931    0.900      0.637    0.867     0.909     Solo DaÃ±os
+                 0.340    0.003    0.580      0.340    0.429      0.440    0.789     0.356     Con Muertos
+Weighted Avg.    0.848    0.252    0.843      0.848    0.843      0.631    0.864     0.869     
+
+=== Confusion Matrix ===
+
+     a     b     c   <-- classified as
+ 12348  6182   113 |     a = Con Heridos
+  3102 42689    59 |     b = Solo DaÃ±os
+   282   179   238 |     c = Con Muertos
+

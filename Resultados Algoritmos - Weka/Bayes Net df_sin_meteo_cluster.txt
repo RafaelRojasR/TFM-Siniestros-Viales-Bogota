@@ -1,0 +1,99 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.bayes.BayesNet -D -Q weka.classifiers.bayes.net.search.local.K2 -- -P 1 -S BAYES -E weka.classifiers.bayes.net.estimate.SimpleEstimator -- -A 0.5
+Relation:     df_sin_meteo_cluster-weka.filters.unsupervised.attribute.Remove-R1,13-14
+Instances:    325958
+Attributes:   11
+              HORA
+              CLASE SINIESTRO
+              CHOQUE_CON
+              TIPO LUGAR
+              GRAVEDAD
+              TIPO PERSONA
+              EDAD
+              SEXO
+              PERSONAS IMPLICADAS
+              DIA_SEMANA
+              Cluster
+Test mode:    split 80.0% train, remainder test
+
+=== Classifier model (full training set) ===
+
+Bayes Network Classifier
+not using ADTree
+#attributes=11 #classindex=4
+Network structure (nodes followed by parents)
+HORA(4): GRAVEDAD 
+CLASE SINIESTRO(1): GRAVEDAD 
+CHOQUE_CON(2): GRAVEDAD 
+TIPO LUGAR(7): GRAVEDAD 
+GRAVEDAD(3): 
+TIPO PERSONA(5): GRAVEDAD 
+EDAD(16): GRAVEDAD 
+SEXO(3): GRAVEDAD 
+PERSONAS IMPLICADAS(25): GRAVEDAD 
+DIA_SEMANA(2): GRAVEDAD 
+Cluster(9): GRAVEDAD 
+LogScore Bayes: -3041661.333896678
+LogScore BDeu: -3042373.361009718
+LogScore MDL: -3042480.9039601544
+LogScore ENTROPY: -3041249.535149838
+LogScore AIC: -3041443.535149838
+
+
+Time taken to build model: 0.66 seconds
+
+
+=== Classifier model for training split (260766 instances) ===
+
+Bayes Network Classifier
+not using ADTree
+#attributes=11 #classindex=4
+Network structure (nodes followed by parents)
+HORA(4): GRAVEDAD 
+CLASE SINIESTRO(1): GRAVEDAD 
+CHOQUE_CON(2): GRAVEDAD 
+TIPO LUGAR(7): GRAVEDAD 
+GRAVEDAD(3): 
+TIPO PERSONA(5): GRAVEDAD 
+EDAD(15): GRAVEDAD 
+SEXO(3): GRAVEDAD 
+PERSONAS IMPLICADAS(23): GRAVEDAD 
+DIA_SEMANA(2): GRAVEDAD 
+Cluster(9): GRAVEDAD 
+LogScore Bayes: -2439685.82869003
+LogScore BDeu: -2440346.5336185987
+LogScore MDL: -2440446.0139638796
+LogScore ENTROPY: -2439292.4114311286
+LogScore AIC: -2439477.4114311286
+
+=== Evaluation on test split ===
+
+Time taken to test model on test split: 0.08 seconds
+
+=== Summary ===
+
+Correctly Classified Instances       54606               83.7618 %
+Incorrectly Classified Instances     10586               16.2382 %
+Kappa statistic                          0.5815
+Mean absolute error                      0.1529
+Root mean squared error                  0.2856
+Relative absolute error                 54.1243 %
+Root relative squared error             76.0289 %
+Total Number of Instances            65192     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.603    0.064    0.791      0.603    0.685      0.591    0.866     0.782     Con Heridos
+                 0.945    0.393    0.851      0.945    0.896      0.610    0.873     0.924     Solo DaÃ±os
+                 0.023    0.000    0.457      0.023    0.044      0.100    0.839     0.100     Con Muertos
+Weighted Avg.    0.838    0.295    0.830      0.838    0.826      0.599    0.870     0.874     
+
+=== Confusion Matrix ===
+
+     a     b     c   <-- classified as
+ 11249  7377    17 |     a = Con Heridos
+  2507 43341     2 |     b = Solo DaÃ±os
+   457   226    16 |     c = Con Muertos
+
